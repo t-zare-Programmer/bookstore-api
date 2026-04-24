@@ -2,22 +2,51 @@
 
 A RESTful API for managing books, authors, and categories built with Django and Django REST Framework.
 
-## 🚀 Features
-- Book management (CRUD)
-- Author and category management
-- RESTful API endpoints
-- Scalable project structure
+## 🚀 Overview
+This project is designed to manage a bookstore system with advanced API capabilities including filtering, searching, and optimized database queries.
 
 ## 🧰 Tech Stack
 - Python
 - Django
 - Django REST Framework (DRF)
-- SQLite (for development)
+- PostgreSQL
+- Django Filter
+
+## ⚙️ Features
+
+### 📖 Book Management
+- Full CRUD operations for books
+- Optimized queries using `select_related`
+- Image upload support for book covers
+
+### 👤 Author & Category Management
+- Separate models for authors and categories
+- Relationship handling using ForeignKey
+- Clean admin interface for management
+
+### 🔍 Advanced API Features
+- Filtering by category and author
+- Search functionality (`title`, `description`, `author`)
+- Ordering by price and title
+
+### 🔐 Permissions
+- Read access for all users
+- Write operations restricted (IsAuthenticatedOrReadOnly)
+
+### 🧱 Serializer Design
+- Nested serializers for read operations
+- Separate `author_id` and `category_id` for write operations
+
+### ⚡ Extra Features
+- Custom admin panel configuration
+- Data seeding script (`populate_books.py`)
 
 ## 📦 Project Structure
-- books
-- authors
-- categories
+- apps/books
+  - models
+  - serializers
+  - views
+  - admin
 
 ## ⚙️ Installation
 
